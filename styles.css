@@ -1,0 +1,774 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Cambiar la fuente para que coincida */
+    background-color: #F5F5DC; /* Fondo general */
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #F5F5DC;
+    padding: 1rem 3rem; /* Ajuste de margen superior e inferior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 90px; /* Tamaño del logo ajustado */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem; /* Más espacio entre elementos */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #6F4C3E;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #D9CBB6; /* Color más claro para hover */
+    color: #333;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-item img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+    background: url('./img/back.svg') center/cover no-repeat;
+    height: 400px; /* Altura exacta */
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurecer fondo */
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.hero-buttons .btn {
+    background-color: #F3F3DE;
+    color: #6F4C3E;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    background-color: #E2E2C4;
+    transform: scale(1.05);
+}
+
+/* About Section */
+/* About Section */
+.about {
+    padding: 60px 100px; /* Márgenes externos ajustados */
+    background-color: #F5F5DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaciado entre imagen y texto */
+    max-width: 1200px; /* Ancho máximo para mantener consistencia */
+    margin: auto; /* Centrar la sección */
+}
+
+.about-content img {
+    flex: 1;
+    max-width: 500px; /* Limitar el tamaño de la imagen */
+    height: auto;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
+}
+
+/* Hover Effect */
+.about-content img:hover {
+    transform: scale(1.05); /* Zoom leve */
+    filter: brightness(1.1); /* Aumentar brillo */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+
+.about-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaciado entre elementos internos */
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #6F4C3E; /* Color del título */
+    margin-bottom: 1rem; /* Espaciado inferior del título */
+    text-transform: uppercase; /* Mayúsculas para profesionalismo */
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.8; /* Altura de línea para mejor legibilidad */
+    color: #333;
+    text-align: justify; /* Justificar el texto */
+    margin: 0; /* Eliminar márgenes extra */
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
+        text-align: center; /* Centrar texto */
+    }
+
+    .about-content img {
+        max-width: 100%; /* Imagen ocupa ancho completo */
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #6F4C3E;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: rem;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+
+/* Banner panaderia */
+
+/* Banner */
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.banner-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Panes Section */
+.panes-section {
+    display: flex;
+    padding: 40px 100px;
+    background-color: #F5F5DC;
+    gap: 20px;
+}
+
+
+/* Sidebar - Panes */
+.panes-sidebar {
+    background-color: #6b4f3d;
+    color: #fff;
+    padding: 20px;
+    width: 20%;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    transition: all 0.3s ease; /* Transición suave */
+    position: relative; /* Pegado al scroll */
+    top: 20px; /* Separación superior */
+    align-self: flex-start;
+}
+
+.panes-sidebar h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Estilo en mayúsculas */
+    color: #f8f3e8;
+    border-bottom: 2px solid #8b5e3c; /* Separador decorativo */
+    padding-bottom: 10px;
+}
+
+.panes-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.panes-sidebar ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px 15px; /* Más espacio interno */
+    border-radius: 5px; /* Bordes más suaves */
+    background-color: transparent; /* Fondo por defecto */
+    transition: all 0.3s ease; /* Transición suave */
+    top: auto;
+    height: auto;
+}
+
+/* Hover Effect for Sidebar Items */
+.panes-sidebar ul li:hover {
+    background-color: #8b5e3c; /* Color de fondo al pasar el mouse */
+    color: #f8f3e8; /* Texto más claro */
+    transform: translateX(5px); /* Movimiento sutil hacia la derecha */
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Sombra para realce */
+}
+
+
+/* Content Area */
+.panes-content {
+    width: 70%;
+    padding-left: 30px; /* Espaciado interno para separación del sidebar */
+    margin: auto; /* Centrar contenido */
+}
+
+.panes-content h2 {
+    margin-top: 50px;
+    font-size: 2rem;
+    color: #6b4f3d;
+    text-align: left; /* Título alineado a la izquierda */
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    border-bottom: 2px solid #ddd; /* Separador decorativo */
+    padding-bottom: 10px;
+}
+
+/* Grid for Panes */
+.panes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste dinámico de columnas */
+    gap: 30px; /* Más espacio entre los elementos */
+    margin-top: 20px;
+    justify-items: center; /* Centrar ítems horizontalmente */
+}
+
+/* Individual Pane Item */
+.pane-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Bordes más suaves */
+    text-align: center;
+    transition: all 0.3s ease;
+    max-width: 400px; /* Ancho máximo para mantener proporción */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.pane-item:hover {
+    transform: translateY(-10px); /* Mayor elevación */
+    box-shadow: 8px 8px 20px rgba(139, 104, 5, 0.3); /* Sombra más pronunciada */
+    border-color: #6b4f3d;
+}
+
+/* Imagen en Ítems */
+.pane-item img {
+    max-width: 80%; /* Limitar tamaño de imágenes */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px; /* Espaciado inferior */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect on Images */
+.pane-item:hover img {
+    transform: scale(1.1); /* Zoom sutil */
+    opacity: 0.95;
+}
+
+/* Títulos de Ítems */
+.pane-item h4 {
+    font-size: 1.3rem;
+    color: #6b4f3d;
+    margin-bottom: 10px;
+    font-weight: bold; /* Resaltar títulos */
+    transition: color 0.3s ease;
+}
+
+.pane-item:hover h4 {
+    color: #8b5e3c;
+}
+
+/* Descripciones de Ítems */
+.pane-item p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6; /* Mejora de legibilidad */
+    text-align: justify;
+    margin: 0; /* Ajuste de márgenes */
+    transition: color 0.3s ease;
+}
+
+.pane-item:hover p {
+    color: #555;
+}
+
+/* Responsivo para Sidebar y Grid */
+@media (max-width: 768px) {
+    .panes-sidebar {
+        width: 100%; /* Ocupa todo el ancho */
+        max-width: none;
+        position: relative; /* Elimina el sticky */
+        top: 0;
+        margin-bottom: 20px; /* Espaciado inferior */
+    }
+
+    .panes-content {
+        width: 100%; /* Ocupa todo el ancho */
+        padding-left: 0;
+    }
+
+    .panes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar columnas */
+        gap: 20px; /* Espaciado reducido */
+    }
+}
+
+/* Empanadas Section */
+/* General Settings for Section */
+.empanadas-section {
+    display: flex;
+    padding: 40px 100px; /* Márgenes externos ajustados */
+    background-color: #F5F5DC;
+    gap: 40px; /* Espaciado entre la barra lateral y el contenido */
+}
+
+/* Sidebar */
+.empanadas-sidebar {
+    background-color: #6b4f3d;
+    color: #fff;
+    padding: 20px;
+    width: 20%;
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+.empanadas-sidebar h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.empanadas-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.empanadas-sidebar ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.empanadas-sidebar ul li:hover {
+    background-color: #8b5e3c;
+    color: #f8f3e8;
+    transform: translateX(5px);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section */
+.empanadas-content {
+    width: 75%;
+}
+
+.empanadas-content h2 {
+    font-size: 1.8rem;
+    color: #6b4f3d;
+    text-align: center;
+    margin-bottom: 30px; /* Espaciado inferior ajustado */
+}
+
+/* Grid for Empanadas */
+.empanadas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 40px; /* Espaciado entre los elementos */
+    justify-items: center; /* Centrar los ítems horizontalmente */
+}
+
+/* Individual Empanada Item */
+.empanada-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 90%; /* Ajuste del ancho para respetar márgenes */
+    max-width: 300px; /* Limitar el ancho máximo */
+}
+
+.empanada-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: #6b4f3d;
+}
+
+.empanada-item img {
+    max-width: 80%; /* Respetar márgenes internos */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Espaciado inferior para la imagen */
+    transition: all 0.3s ease;
+}
+
+.empanada-item:hover img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.empanada-item h4 {
+    font-size: 1.2rem;
+    color: #6b4f3d;
+    margin-bottom: 10px; /* Espaciado inferior del título */
+    transition: color 0.3s ease;
+}
+
+.empanada-item:hover h4 {
+    color: #8b5e3c;
+}
+
+.empanada-item p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6; /* Mejor legibilidad */
+    text-align: justify; /* Justificar el texto */
+    margin-top: 10px; /* Espaciado superior del texto */
+    transition: color 0.3s ease;
+}
+
+.empanada-item:hover p {
+    color: #555;
+}
+
+/* Pastelería Section */
+.pasteleria-section {
+    display: flex;
+    padding: 40px 100px; /* Márgenes externos */
+    background-color: #F5F5DC;
+    gap: 40px; /* Espaciado entre el sidebar y el contenido */
+}
+
+/* Sidebar */
+.pasteleria-sidebar {
+    background-color: #6b4f3d;
+    color: #fff;
+    padding: 20px;
+    width: 25%; /* Sidebar más amplio */
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.pasteleria-sidebar h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.pasteleria-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pasteleria-sidebar ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.pasteleria-sidebar ul li:hover {
+    background-color: #8b5e3c;
+    color: #f8f3e8;
+    transform: translateX(10px);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Area */
+.pasteleria-content {
+    width: 75%;
+}
+
+.pasteleria-content h2 {
+    font-size: 2rem;
+    color: #6b4f3d;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+/* Grid for Pastelería */
+.pasteleria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 40px; /* Espaciado entre ítems */
+    justify-items: center;
+}
+
+/* Individual Item */
+.pasteleria-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 280px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pasteleria-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: #6b4f3d;
+}
+
+.pasteleria-item img {
+    max-width: 70%; /* Ajustar tamaño de las imágenes */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.pasteleria-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.pasteleria-item h4 {
+    font-size: 1.3rem;
+    color: #6b4f3d;
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.pasteleria-item:hover h4 {
+    color: #8b5e3c;
+}
+
+.pasteleria-item p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.pasteleria-item:hover p {
+    color: #555;
+}
+
+/* contact */
+
+
+.contact-section {
+    display: flex;
+    padding: 40px 100px; /* Márgenes externos */
+    background-color: #F5F5DC;
+    gap: 40px; /* Espaciado entre el sidebar y el contenido */
+}
+
+.contact-section h2 {
+    color: #6b4f3d; /* Color del título */
+}
+
+/* Contenedor principal */
+.contact-container {
+    display: flex; /* Usamos Flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Espacio uniforme entre las secciones */
+    align-items: flex-start; /* Alinea las secciones al inicio del eje vertical */
+    gap: 20px; /* Espacio entre las secciones */
+    flex-wrap: wrap; /* Permite que las secciones se reorganicen en pantallas pequeñas */
+    padding: 20px;
+}
+
+/* Secciones individuales */
+.contact-info, .contact-details {
+    flex: 1; /* Ambas secciones ocupan espacio proporcional */
+    max-width: 48%; /* Limita el ancho máximo de las secciones */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.contact-details .map iframe {
+    width: 100%; /* Asegura que el mapa se ajuste al ancho del contenedor */
+    max-width: 300px; /* Limita el tamaño máximo del mapa */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    gap: 1rem; /* Espaciado entre los elementos */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    padding: 20px;
+    background-color: #F5F5DC; /* Fondo similar al de la imagen */
+    border-radius: 10px; /* Bordes redondeados generales */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%; /* Los campos ocupan el ancho completo del contenedor */
+    max-width: 400px; /* Limita el ancho máximo de los campos */
+    padding: 15px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #8B5E3C; /* Color de fondo */
+    color: #fff; /* Texto blanco */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-family: "Arial", sans-serif; /* Asegura una fuente limpia */
+    box-shadow: none; /* Quita sombras */
+    outline: none; /* Elimina el contorno predeterminado */
+    display: block;
+    margin: 0 auto; /* Centrar el botón horizontalmente */
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: 2px solid #FFCF46; /* Resalta el campo activo con borde amarillo */
+    
+}
+
+.contact-form button {
+    background-color: #8B5E3C; /* Fondo del botón */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por el botón */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    display: block;
+    margin: 0 auto; /* Centrar el botón horizontalmente */
+}
+
+.contact-form button:hover {
+    background-color: #714a2c; /* Oscurece el fondo al pasar el cursor
+     */
+    
+}
+
+
+
+
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Las secciones se apilan verticalmente */
+    }
+    .contact-info, .contact-details {
+        max-width: 100%; /* Las secciones ocupan todo el ancho */
+    }
+}
+
+
